@@ -6,8 +6,27 @@ public class LibraryItem{
         this.title = title;        
         this.category = category;
         this.DDS = DDS;
-        
-
-
     }
+
+    //Getters and Setters
+
+    public String getTitle(){
+        return title;
+    }
+    public void setTitle(String title){
+        this.title = title;
+    }
+    public String getCategory(){
+        return category;
+    }
+    public void setCategory(String category){
+        this.category = category;
+    }
+    public int getDDS() {
+        return DDS;
+    }
+    public void setDDS(int DDS){
+        this.DDS = DDS;
+    }
+
 }
