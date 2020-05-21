@@ -1,8 +1,8 @@
-public class Periodical extends LibraryItem {
-    private String publisher;
+public class Periodical extends LibraryItem implements Reservable{
+    private PublishingCompany publisher;
     private String publishedDate;
 
-    public Periodical(String title, String category, int DDS, String publisher, String publishedDate) {
+    public Periodical(String title, String category, int DDS, PublishingCompany publisher, String publishedDate) {
         super(title, category, DDS);
         this.publishedDate = publishedDate;
         this.publisher = publisher;
@@ -10,10 +10,10 @@ public class Periodical extends LibraryItem {
 
     //Setters and Getters
 
-    public String getPublisher(){
+    public PublishingCompany getPublisher(){
         return publisher;
     }
-    public void setPublisher(String publisher){
+    public void setPublisher(PublishingCompany publisher){
         this.publisher = publisher;
     }
     public String getPublishedDate(){
@@ -21,6 +21,12 @@ public class Periodical extends LibraryItem {
     }
     public void setPublishedDate(String publishedDate){
         this.publishedDate = publishedDate;
+    }
+
+    //Implements methods from IReservable
+    @Override
+    public boolean isReservable(){
+        return true;
     }
     
 }

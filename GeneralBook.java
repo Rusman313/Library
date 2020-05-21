@@ -1,7 +1,7 @@
 public class GeneralBook extends Book {
 
-    public GeneralBook(String title, String category, int DDS, String author) {
-        super(title, category, DDS, author);
+    public GeneralBook(String title, String category, int DDS, Author authorName) {
+        super(title, category, DDS, authorName);
         // TODO Auto-generated constructor stub
     }
     

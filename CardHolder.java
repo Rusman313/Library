@@ -1,7 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class CardHolder {
     private String firstName;
     private String lastName;
     private int libraryCardNum;
+    List <String> overdueBooks = new ArrayList<String>();//TODO come back to this!
    public CardHolder(){
 
    } 
