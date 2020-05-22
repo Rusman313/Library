@@ -1,9 +1,9 @@
 class PublishingCompany {
     String pubCompany;
-    public PublishingCompany(){
+    public PublishingCompany(){//default
         this.pubCompany = "Publishing Company";
     }
-    public PublishingCompany(String pubCompany){
+    public PublishingCompany(String pubCompany){//takes arguments
         this.pubCompany = pubCompany;
     }
 

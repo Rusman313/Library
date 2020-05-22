@@ -10,7 +10,5 @@ public class OverdueList<E extends Book> {
     public E getOverdueItems(){
         return this.overdueItem;
     }
-// TODO possibly make a setter for overdue items. 
-
-    
+// TODO possibly make a setter for overdue items.     
 }

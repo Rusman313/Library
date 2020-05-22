@@ -1,6 +1,8 @@
 public class Book extends LibraryItem implements Reservable, Loanable {
     //private String author;
     public Author authorName;
+    public LateCharges lateCharges;
+
     public Book (String title, String subject, int DDS, Author authorName){
         super(title, subject, DDS);
         //this.author = author;
@@ -27,6 +29,41 @@ public class Book extends LibraryItem implements Reservable, Loanable {
     public boolean isLonable() {        
         return true;
     }
+    @Override
+public  void lateFee(int days) {
+    int yourBill = fee * days;
+    System.out.println(yourBill);
+
+}
+
+int fee = 0;   
+public void setLateFee(){
+    
+    switch (this.lateCharges) {
+        case DAILY:
+            fee = 1;            
+            break;
+        case WEEKLY:
+            fee = 5;
+            break;
+        case BIWEEKLY:
+            fee = 7;
+            break;
+        case MONTHLY:
+            fee = 15;
+            break;    
+        default:
+        fee = 0;
+            break;
+    }
+    System.out.println("Your late fees are: " + fee);
+
+}
+
+//public static void printBookInfo() {
+    //System.out.println(title +  );
+    
+//}
 
   /* class Author{
         String firstName;
